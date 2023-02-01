@@ -23,7 +23,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import img from "../Asset/stats.png";
 import moment from "moment";
-import ReactDOM from 'react-dom';
+
 import ReactPaginate from 'react-paginate'
 
 const Dashboard = () => {
