@@ -39,7 +39,7 @@ const Dashboard = () => {
   ]);
 
   useEffect(() => {
-    const data = () => fetch(
+    const data = ()=>fetch(
       `https://admindevapi.wowtalent.live/api/admin/dashboard/installstatasticlist?fromdate=${moment(
         state[0]?.startDate
       ).format("YYYY-MM-DD")}&todate=${moment(state[0]?.endDate).format(
@@ -48,10 +48,10 @@ const Dashboard = () => {
     )
       .then((res) => res.json())
       .then((res) => setdata(res));
-    data()
+      data()
   }, [state , select]);
   return (
-    <div className="admin_page w-full h-full flex items-baseline justify-between lg:flex-row flex-col">
+    <div className="admin_page w-full h-full flex items-baseline justify-between lg:flex-row flex-col lg:items-start">
       <FontAwesomeIcon icon={faBars} className = "lg:hidden block pl-3 pt-5 text-white z-10 " onClick={()=>setbutton(!button)} />
       <div className="left_content hidden lg:block">
         <div className="bg-[#283046] p-3 w-[220px] h-[80vh] ">
@@ -113,7 +113,7 @@ const Dashboard = () => {
 
       {
 !button ? ""  : <div className="left_content absolute">
-<div className="bg-[#283046] p-3 w-[220px] h-[80vh] ">
+<div className="bg-[#283046] p-3 w-[220px] h-[100vh] ">
   <div className="flex justify-between ">
     <h1 className="text-blue-900 text-2xl font-[800] w-full pl-5">WOW</h1>
     <img alt="" src={img} className="w-[20px]" />
@@ -171,12 +171,12 @@ const Dashboard = () => {
 
       }
       <div className="right_content flex  w-full mt-5 gap-5 flex-col lg:ml-7 ml-0 lg:p-0  px-4  ">
-        <div className="bg-[#283046] lg:w-[1250px] w-full lg:h-[238px] h-[80vh] ">
+        <div className="bg-[#283046] lg:w-[1250px] w-full lg:h-[238px] h-[100vh] ">
           <div className="flex items-center w-full justify-center lg:pt-10 pt-5 lg:pl-10 p-5 ">
             <div className="flex flex-col w-full ">
               <div className=" flex justify-between lg:w-[80%] w-full  lg:flex-row flex-col space-y-5">
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[63px] h-[63px] bg-white flex items-center justify-center rounded-full">
+                  <div className="lg:w-[109px] w-[74px]  h-[63px] bg-white flex items-center justify-center rounded-full">
                     <FontAwesomeIcon
                       icon={faDownload}
                       className="w-[36px] h-[36px]"
@@ -190,7 +190,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[63px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="font-[20px]  text-white">900</div>
                     <span className="font-[10px] text-white">
@@ -199,7 +199,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[63px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="font-[20px]  text-white">14.85%</div>
                     <span className="font-[10px] text-white">Churn Rate</span>
@@ -209,7 +209,7 @@ const Dashboard = () => {
 
               <div className=" flex justify-between w-full mt-5 lg:w-[80%]   lg:flex-row flex-col space-y-5">
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[63px] h-[63px] bg-white flex items-center justify-center rounded-full">
+                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full">
                     <FontAwesomeIcon
                       icon={faDownload}
                       className="w-[36px] h-[36px]"
@@ -223,7 +223,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[63px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="font-[20px]  text-white">900</div>
                     <span className="font-[10px] text-white">
@@ -232,7 +232,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[63px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="font-[20px]  text-white">14.85%</div>
                     <span className="font-[10px] text-white">Churn Rate</span>
@@ -261,7 +261,7 @@ const Dashboard = () => {
               className="border border-gray-700 bg-[#161C32] py-1 px-2 text-white rounded-md w-48 capitalize cursor-pointer "
               onClick={() => setchange(!change)}
             >
-              select diration
+              select duration
             </span>
 
             {/* date picker */}
@@ -309,7 +309,7 @@ const Dashboard = () => {
               console.log(data, "hv");
               return (
                 <>
-                <div className="text-[12px] flex justify-between  w-[90%] mt-4 text-white items-center">
+                <div className="  text-[5px] md:text-[12px] flex justify-between  lg:w-[90%] w-full mt-4 text-white items-center">
                   <span>{moment(data.created_At).format("YYYY-MM-DD")}</span>
                   <span className="w-[30px]">{data.totalinstall}</span>
                   <div className="flex flex-col items-baseline w-[80px]">
