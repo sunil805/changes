@@ -23,13 +23,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import img from "../Asset/stats.png";
 import moment from "moment";
+import ReactDOM from 'react-dom';
+import ReactPaginate from 'react-paginate'
 
 const Dashboard = () => {
 
   const [data, setdata] = useState();
   const [change, setchange] = useState(false);
   const[select , setselect] = useState(10)
-  const [button , setbutton] = useState()
+  const [button , setbutton] = useState();
+  const [page , setPage] = useState(1)
+  const [pageCount , setPageCount] = useState(0)
   const [state, setState] = useState([
     {
       startDate: new Date(),
@@ -44,12 +48,20 @@ const Dashboard = () => {
         state[0]?.startDate
       ).format("YYYY-MM-DD")}&todate=${moment(state[0]?.endDate).format(
         "YYYY-MM-DD"
-      )}&page=1&limit=${select}`
+      )}&page=${page}&limit=${select}`
     )
       .then((res) => res.json())
-      .then((res) => setdata(res));
+      .then((res) => {
+        setdata(res);
+        setPageCount(res?.data?.pages ,"jhshs")
+      });
       data()
-  }, [state , select]);
+  }, [state , select , page]);
+
+
+const handlePageClick = (e) =>{
+  setPage(e?.selected + 1)
+}
   return (
     <div className="admin_page w-full h-full flex items-baseline justify-between lg:flex-row flex-col lg:items-start">
       <FontAwesomeIcon icon={faBars} className = "lg:hidden block pl-3 pt-5 text-white z-10 " onClick={()=>setbutton(!button)} />
@@ -174,9 +186,9 @@ const Dashboard = () => {
         <div className="bg-[#283046] lg:w-[1250px] w-full lg:h-[238px] h-[100vh] ">
           <div className="flex items-center w-full justify-center lg:pt-10 pt-5 lg:pl-10 p-5 ">
             <div className="flex flex-col w-full ">
-              <div className=" flex justify-between lg:w-[80%] w-full  lg:flex-row flex-col space-y-5">
+              <div className=" flex justify-between lg:w-[80%] w-full  space-y-5">
                 <div className="flex space-x-5 items-center">
-                  <div className="lg:w-[109px] w-[74px]  h-[63px] bg-white flex items-center justify-center rounded-full">
+                  <div className="w-[109px]   h-[63px] bg-white flex items-center justify-center rounded-full">
                     <FontAwesomeIcon
                       icon={faDownload}
                       className="w-[36px] h-[36px]"
@@ -190,7 +202,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="font-[20px]  text-white">900</div>
                     <span className="font-[10px] text-white">
@@ -199,7 +211,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="font-[20px]  text-white">14.85%</div>
                     <span className="font-[10px] text-white">Churn Rate</span>
@@ -207,9 +219,9 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              <div className=" flex justify-between w-full mt-5 lg:w-[80%]   lg:flex-row flex-col space-y-5">
+              <div className=" flex justify-between w-full mt-5 lg:w-[80%]   items-baseline space-y-5">
                 <div className="flex space-x-5 items-center">
-                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full">
+                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full">
                     <FontAwesomeIcon
                       icon={faDownload}
                       className="w-[36px] h-[36px]"
@@ -223,7 +235,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="font-[20px]  text-white">900</div>
                     <span className="font-[10px] text-white">
@@ -232,7 +244,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="lg:w-[109px] w-[74px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="font-[20px]  text-white">14.85%</div>
                     <span className="font-[10px] text-white">Churn Rate</span>
@@ -306,7 +318,6 @@ const Dashboard = () => {
           
           <div>
           {data?.data?.data?.map((data, index) => {
-              console.log(data, "hv");
               return (
                 <>
                 <div className="  text-[5px] md:text-[12px] flex justify-between  lg:w-[90%] w-full mt-4 text-white items-center">
@@ -356,7 +367,25 @@ const Dashboard = () => {
             })}
               
           </div>
+
           </div>
+        <div className="flex justify-end p-3">
+        <>
+      {/* <Items currentItems={currentItems} /> */}
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        activeLinkClassName="text-red"
+        renderOnZeroPageCount={null}
+        className ="flex gap-4 text-white  mt-4 bg-green-600 "
+        id="paginate"
+      />
+    </>
+        </div>
         </div>
       </div>
     </div>

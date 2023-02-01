@@ -6,3 +6,9 @@ body{
     background: #161C32;
 }
 
+.selected {
+    background: blue;
+    padding: 2px 8px;
+    border-radius: 20px;
+    color: white;
+}
