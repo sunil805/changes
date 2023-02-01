@@ -5,7 +5,7 @@ import "react-date-range/dist/theme/default.css";
 import { addDays } from "date-fns";
 import { DateRangePicker } from "react-date-range";
 import {
-  faTable,
+  
   faDashboard,
   faUser,
   faVideoCamera,
@@ -35,7 +35,7 @@ const Dashboard = () => {
   ]);
 
   useEffect(() => {
-    const data = fetch(
+    const data = () => fetch(
       `https://admindevapi.wowtalent.live/api/admin/dashboard/installstatasticlist?fromdate=${moment(
         state[0]?.startDate
       ).format("YYYY-MM-DD")}&todate=${moment(state[0]?.endDate).format(
@@ -44,6 +44,7 @@ const Dashboard = () => {
     )
       .then((res) => res.json())
       .then((res) => setdata(res));
+    data()
   }, [state , select]);
   return (
     <div className="admin_page w-full h-full flex justify-between">
