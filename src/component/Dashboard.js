@@ -331,7 +331,7 @@ const Dashboard = () => {
                         {moment(data.created_At).format("YYYY-MM-DD")}
                       </span>
                       <span className="w-[30px]">{data.totalinstall}</span>
-                      <div className="flex flex-col items-baseline w-[80px]">
+                      <div className="flex flex-col items-baseline md:w-[80px] w-[40px]">
                         <div className="space-x-2">
                           <FontAwesomeIcon icon={faRobot} />
                           <span>{data.android_install}</span>
@@ -343,7 +343,7 @@ const Dashboard = () => {
                       </div>
                       <span className="w-[30px]">{data.totaluninstall}</span>
 
-                      <div className="flex flex-col items-baseline w-[80px]">
+                      <div className="flex flex-col items-baseline md:w-[80px] w-[40px]">
                         <div className="space-x-2">
                           <FontAwesomeIcon icon={faRobot} />
                           <span>{data.android_uninstall}</span>
@@ -356,7 +356,7 @@ const Dashboard = () => {
 
                       <span className="w-[30px]">{data.totalchurn}</span>
 
-                      <div className="flex flex-col items-baseline w-[80px]">
+                      <div className="flex flex-col items-baseline  md:w-[80px] w-[40px]">
                         <div className="space-x-2">
                           <FontAwesomeIcon icon={faRobot} />
                           <span>{data.android_churn}%</span>
