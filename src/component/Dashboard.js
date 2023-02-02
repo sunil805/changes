@@ -328,7 +328,7 @@ const Dashboard = () => {
 
           <div>
             <div className=" bg-[#271C1C]  border border-gray-500  mt-4 ">
-              <ul className="  flex justify-between py-2 lg:pl-10 p-2 lg:text-[12px]  text-[5px] text-white lg:w-[90%] w-full">
+              <ul className="  flex justify-between md:py-1 px-1 py-1 lg:pl-10 lg:text-[12px]  text-[5px] text-white lg:w-[90%] w-full">
                 <li>Day</li>
                 <li>Days install</li>
                 <li>plateform</li>
@@ -349,36 +349,36 @@ const Dashboard = () => {
                       </span>
                       <span className="w-[30px]">{data.totalinstall}</span>
                       <div className="flex flex-col items-baseline md:w-[80px] w-[30px]">
-                        <div className="space-x-2">
+                        <div className="space-x-1">
                           <FontAwesomeIcon icon={faRobot} />
                           <span>{data.android_install}</span>
                         </div>
-                        <div className="space-x-2">
+                        <div className="space-x-1">
                           <FontAwesomeIcon icon={faAppleAlt} />
                           <span>{data.ios_install}</span>
                         </div>
                       </div>
-                      <span className="w-[30px]">{data.totaluninstall}</span>
+                      <span className="md:w-[30px] w-[24px]">{data.totaluninstall}</span>
 
-                      <div className="flex flex-col items-baseline md:w-[80px] w-[40px]">
-                        <div className="space-x-2">
+                      <div className="flex flex-col lg:items-baseline items-center md:w-[50px] w-[40px]">
+                        <div className="space-x-1">
                           <FontAwesomeIcon icon={faRobot} />
                           <span>{data.android_uninstall}</span>
                         </div>
-                        <div className="space-x-2">
+                        <div className="space-x-1">
                           <FontAwesomeIcon icon={faAppleAlt} />
                           <span>{data.ios_uninstall}</span>
                         </div>
                       </div>
 
-                      <span className="w-[30px]">{data.totalchurn}</span>
+                      <span className="md:w-[30px] w-[24px]">{data.totalchurn}</span>
 
                       <div className="flex flex-col items-baseline  md:w-[80px] w-[40px]">
-                        <div className="space-x-2">
+                        <div className="space-x-1">
                           <FontAwesomeIcon icon={faRobot} />
                           <span>{data.android_churn}%</span>
                         </div>
-                        <div className="space-x-2">
+                        <div className="space-x-1">
                           <FontAwesomeIcon icon={faAppleAlt} />
                           <span>{data.ios_churn}%</span>
                         </div>
