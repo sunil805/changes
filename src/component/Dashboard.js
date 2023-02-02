@@ -373,7 +373,7 @@ const Dashboard = () => {
 
                       <span className="md:w-[30px] w-[24px]">{data.totalchurn}</span>
 
-                      <div className="flex flex-col items-baseline  md:w-[80px] w-[40px]">
+                      <div className="flex flex-col md:items-baseline items-center  md:w-[80px] w-[40px]">
                         <div className="space-x-1">
                           <FontAwesomeIcon icon={faRobot} />
                           <span>{data.android_churn}%</span>
