@@ -129,8 +129,8 @@ const Dashboard = () => {
       {!button ? (
         ""
       ) : (
-        <div className="left_content absolute">
-          <div className="bg-[#283046] p-3 w-[220px] h-[100vh] ">
+        <div className="left_content absolute w-[220px] h-[100vh] ">
+          <div className="bg-[#283046] p-3 h-[100vh] ">
             <div className="flex justify-between ">
               <h1 className="text-blue-900 text-2xl font-[800] w-full pl-5">
                 WOW
@@ -348,7 +348,7 @@ const Dashboard = () => {
                         {moment(data.created_At).format("YYYY-MM-DD")}
                       </span>
                       <span className="w-[30px]">{data.totalinstall}</span>
-                      <div className="flex flex-col items-baseline md:w-[80px] w-[40px]">
+                      <div className="flex flex-col items-baseline md:w-[80px] w-[30px]">
                         <div className="space-x-2">
                           <FontAwesomeIcon icon={faRobot} />
                           <span>{data.android_install}</span>
