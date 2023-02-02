@@ -189,15 +189,15 @@ const Dashboard = () => {
         </div>
       )}
       <div className="right_content flex  w-full mt-5 gap-5 flex-col lg:ml-7 ml-0 lg:p-0  px-4  ">
-        <div className="bg-[#283046] lg:w-[1250px] w-full lg:h-[238px] h-[100vh] ">
-          <div className="flex items-center w-full justify-center lg:pt-7 pt-5 lg:pl-10 p-5 ">
-            <div className="flex  w-full items-baseline  lg:flex-col">
-              <div className=" flex justify-between lg:w-[80%] w-full flex-col  lg:flex-row space-y-5">
+        <div className="bg-[#283046] lg:w-[1250px] w-full lg:h-[238px] h-[40vh] ">
+          <div className="flex items-center w-full justify-center lg:pt-7 pt-5 lg:pl-10 lg:p-5 p-2  ">
+            <div className="flex  w-full items-baseline  flex-col">
+              <div className=" flex justify-between lg:w-[80%] w-full items-end  space-y-5">
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[109px]   h-[63px] bg-white flex items-center justify-center rounded-full">
+                  <div className="md:w-[109px]  w-[40px]  md:h-[63px] h-[30px] bg-white flex items-center justify-center rounded-full">
                     <FontAwesomeIcon
                       icon={faDownload}
-                      className="w-[36px] h-[36px]"
+                      className="md:w-[36px] md:h-[36px] w-[20px] h-[15px]"
                     />
                   </div>
                   <div className="w-full">
@@ -210,7 +210,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="md:w-[109px]  w-[40px]  md:h-[63px] h-[30px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="lg:text-[20px] text-[9px] text-white">
                       900
@@ -221,7 +221,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="md:w-[109px]  w-[40px]  md:h-[63px] h-[30px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="lg:text-[20px] text-[9px] text-white">
                       14.85%
@@ -233,12 +233,12 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              <div className=" flex justify-between w-full mt-5 lg:w-[80%] flex-col lg:flex-row   items-baseline space-y-5">
+              <div className=" flex justify-between w-full mt-5 lg:w-[80%]   items-end space-y-5">
                 <div className="flex space-x-5 items-center ">
-                  <div className="w-[109px] h-[63px] bg-white flex items-center  justify-center rounded-full">
+                  <div className="md:w-[109px]  w-[40px]  md:h-[63px] h-[30px] bg-white flex items-center  justify-center rounded-full">
                     <FontAwesomeIcon
                       icon={faDownload}
-                      className="md:w-[36px] w-[26px] h-[36px]"
+                      className="md:w-[36px] md:h-[36px] w-[20px] h-[15px]"
                     />
                   </div>
                   <div className="w-full">
@@ -251,7 +251,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="md:w-[109px]  w-[40px]  md:h-[63px] h-[30px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="  text-white">900</div>
                     <span className="lg:text-[10px] text-[9px] text-white">
@@ -260,7 +260,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex space-x-5 items-center">
-                  <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
+                  <div className="md:w-[109px]  w-[40px]  md:h-[63px] h-[30px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
                     <div className="lg:text-[20px] text-[9px] text-white">
                       14.85%
@@ -402,7 +402,7 @@ const Dashboard = () => {
                 previousLabel="< previous"
                 activeLinkClassName="text-red"
                 renderOnZeroPageCount={null}
-                className="flex gap-4 text-white  mt-4 bg-green-600 "
+                className="flex sm:gap-4 gap-2 text-white text-[10px] mt-4 bg-green-600 "
                 id="paginate"
               />
             </>
