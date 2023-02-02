@@ -193,7 +193,7 @@ const Dashboard = () => {
           <div className="flex items-center w-full justify-center lg:pt-7 pt-5 lg:pl-10 lg:p-5 p-2  ">
             <div className="flex  w-full items-baseline  flex-col">
               <div className=" flex justify-between lg:w-[80%] w-full items-end  space-y-5">
-                <div className="flex space-x-5 items-center">
+                <div className="flex space-x-3 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full">
                     <FontAwesomeIcon
                       icon={faDownload}
@@ -201,32 +201,32 @@ const Dashboard = () => {
                     />
                   </div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[4px] text-white">
+                    <div className="lg:text-[20px] text-[6px] text-white">
                       3154
                     </div>
-                    <span className="lg:text-[10px] text-[4px] text-white">
+                    <span className="lg:text-[10px] text-[6px] text-white">
                       App installed
                     </span>
                   </div>
                 </div>
-                <div className="flex space-x-5 items-center">
+                <div className="flex space-x-3 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[4px] text-white">
+                    <div className="lg:text-[20px] text-[6px] text-white">
                       900
                     </div>
-                    <span className="lg:text-[10px] text-[4px] text-white">
+                    <span className="lg:text-[10px] text-[6px] text-white">
                       Active installed
                     </span>
                   </div>
                 </div>
-                <div className="flex space-x-5 items-center">
+                <div className="flex space-x-3 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[4px] text-white">
+                    <div className="lg:text-[20px] text-[6px] text-white">
                       14.85%
                     </div>
-                    <span className="lg:text-[10px] text-[4px] text-white">
+                    <span className="lg:text-[10px] text-[6px] text-white">
                       Churn Rate
                     </span>
                   </div>
@@ -234,7 +234,7 @@ const Dashboard = () => {
               </div>
 
               <div className=" flex justify-between w-full mt-5 lg:w-[80%]   items-end space-y-5">
-                <div className="flex space-x-5 items-center ">
+                <div className="flex space-x-3 items-center ">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center  justify-center rounded-full">
                     <FontAwesomeIcon
                       icon={faDownload}
@@ -242,30 +242,30 @@ const Dashboard = () => {
                     />
                   </div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[4px] text-white">
+                    <div className="lg:text-[20px] text-[6px] text-white">
                       3154
                     </div>
-                    <span className="lg:text-[10px] text-[4px] text-white">
+                    <span className="lg:text-[10px] text-[6px] text-white">
                       App installed
                     </span>
                   </div>
                 </div>
-                <div className="flex space-x-5 items-center">
+                <div className="flex space-x-3 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="  text-white text-[4px]">900</div>
-                    <span className="lg:text-[10px] text-[4px] text-white">
+                    <div className="  text-white text-[6px]">900</div>
+                    <span className="lg:text-[10px] text-[6px] text-white">
                       Active installed
                     </span>
                   </div>
                 </div>
-                <div className="flex space-x-5 items-center">
+                <div className="flex space-x-3 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[4px] text-white">
+                    <div className="lg:text-[20px] text-[6px] text-white">
                       14.85%
                     </div>
-                    <span className="lg:text-[10px] text-[4px] text-white">
+                    <span className="lg:text-[10px] text-[6px] text-white">
                       Churn Rate
                     </span>
                   </div>
