@@ -201,10 +201,10 @@ const Dashboard = () => {
                     />
                   </div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[9px] text-white">
+                    <div className="lg:text-[20px] text-[4px] text-white">
                       3154
                     </div>
-                    <span className="lg:text-[10px] text-[9px] text-white">
+                    <span className="lg:text-[10px] text-[4px] text-white">
                       App installed
                     </span>
                   </div>
@@ -212,10 +212,10 @@ const Dashboard = () => {
                 <div className="flex space-x-5 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[9px] text-white">
+                    <div className="lg:text-[20px] text-[4px] text-white">
                       900
                     </div>
-                    <span className="lg:text-[10px] text-[9px] text-white">
+                    <span className="lg:text-[10px] text-[4px] text-white">
                       Active installed
                     </span>
                   </div>
@@ -223,10 +223,10 @@ const Dashboard = () => {
                 <div className="flex space-x-5 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[9px] text-white">
+                    <div className="lg:text-[20px] text-[4px] text-white">
                       14.85%
                     </div>
-                    <span className="lg:text-[10px] text-[9px] text-white">
+                    <span className="lg:text-[10px] text-[4px] text-white">
                       Churn Rate
                     </span>
                   </div>
@@ -242,10 +242,10 @@ const Dashboard = () => {
                     />
                   </div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[10px] text-white">
+                    <div className="lg:text-[20px] text-[4px] text-white">
                       3154
                     </div>
-                    <span className="lg:text-[10px] text-[9px] text-white">
+                    <span className="lg:text-[10px] text-[4px] text-white">
                       App installed
                     </span>
                   </div>
@@ -253,8 +253,8 @@ const Dashboard = () => {
                 <div className="flex space-x-5 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="  text-white">900</div>
-                    <span className="lg:text-[10px] text-[9px] text-white">
+                    <div className="  text-white text-[4px]">900</div>
+                    <span className="lg:text-[10px] text-[4px] text-white">
                       Active installed
                     </span>
                   </div>
@@ -262,10 +262,10 @@ const Dashboard = () => {
                 <div className="flex space-x-5 items-center">
                   <div className="md:w-[109px]  w-[69px]  md:h-[63px] h-[40px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[9px] text-white">
+                    <div className="lg:text-[20px] text-[4px] text-white">
                       14.85%
                     </div>
-                    <span className="lg:text-[10px] text-[9px] text-white">
+                    <span className="lg:text-[10px] text-[4px] text-white">
                       Churn Rate
                     </span>
                   </div>
