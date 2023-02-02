@@ -33,11 +33,13 @@ const Dashboard = () => {
   const [pageCount, setPageCount] = useState(0);
   const [state, setState] = useState([
     {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 7),
+      startDate: addDays(new Date(), -500) ,
+      endDate: addDays(new Date(), 50),
       key: "selection",
     },
   ]);
+
+  console.log(moment('2022-04-01').format("YYYY-MM-DD")  , new Date())
 
   useEffect(() => {
     const data = () =>
@@ -55,6 +57,7 @@ const Dashboard = () => {
         });
     data();
   }, [state, select, page]);
+  
 
   const handlePageClick = (e) => {
     setPage(e?.selected + 1);
@@ -198,7 +201,9 @@ const Dashboard = () => {
                     />
                   </div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[9px] text-white">3154</div>
+                    <div className="lg:text-[20px] text-[9px] text-white">
+                      3154
+                    </div>
                     <span className="lg:text-[10px] text-[9px] text-white">
                       App installed
                     </span>
@@ -207,7 +212,9 @@ const Dashboard = () => {
                 <div className="flex space-x-5 items-center">
                   <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[9px] text-white">900</div>
+                    <div className="lg:text-[20px] text-[9px] text-white">
+                      900
+                    </div>
                     <span className="lg:text-[10px] text-[9px] text-white">
                       Active installed
                     </span>
@@ -216,8 +223,12 @@ const Dashboard = () => {
                 <div className="flex space-x-5 items-center">
                   <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[9px] text-white">14.85%</div>
-                    <span className="lg:text-[10px] text-[9px] text-white">Churn Rate</span>
+                    <div className="lg:text-[20px] text-[9px] text-white">
+                      14.85%
+                    </div>
+                    <span className="lg:text-[10px] text-[9px] text-white">
+                      Churn Rate
+                    </span>
                   </div>
                 </div>
               </div>
@@ -231,7 +242,9 @@ const Dashboard = () => {
                     />
                   </div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[10px] text-white">3154</div>
+                    <div className="lg:text-[20px] text-[10px] text-white">
+                      3154
+                    </div>
                     <span className="lg:text-[10px] text-[9px] text-white">
                       App installed
                     </span>
@@ -249,8 +262,12 @@ const Dashboard = () => {
                 <div className="flex space-x-5 items-center">
                   <div className="w-[109px] h-[63px] bg-white flex items-center justify-center rounded-full"></div>
                   <div className="w-full">
-                    <div className="lg:text-[20px] text-[9px] text-white">14.85%</div>
-                    <span className="lg:text-[10px] text-[9px] text-white">Churn Rate</span>
+                    <div className="lg:text-[20px] text-[9px] text-white">
+                      14.85%
+                    </div>
+                    <span className="lg:text-[10px] text-[9px] text-white">
+                      Churn Rate
+                    </span>
                   </div>
                 </div>
               </div>
